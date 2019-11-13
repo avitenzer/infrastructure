@@ -1,0 +1,21 @@
+- name: Add APT key
+  apt_key:
+    keyserver: "hkp://keyserver.ubuntu.com:80"
+    id: "0C49F3730359A14518585931BC711F9BA15703C6"
+    state: present
+
+- name: Add APT repository
+  apt_repository:
+    repo: deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse
+    state: present
+    filename: 'mongodb-org-3.4'
+
+- name: Update repo list and download mongodb package
+  apt:
+    name: mongodb-org
+    update_cache: yes
+
+- name: Start the mongodb service
+  service:
+    name: mongod
+    state: started

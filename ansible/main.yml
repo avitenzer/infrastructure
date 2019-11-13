@@ -1,0 +1,17 @@
+- hosts: localhost
+  become: yes
+  become_user: root
+  become_method: sudo
+  vars:
+    #variable needed during node installation
+    var_node: /tmp
+    yarn_global_path: /usr/local
+
+  roles:
+    - git
+    - nvm
+    - mongodb
+    - yarn
+
+
+
