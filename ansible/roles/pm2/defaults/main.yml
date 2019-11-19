@@ -1,0 +1,10 @@
+---
+startup_type:   systemd
+
+flags:
+  - init
+#    - init # Basic initialization
+#    - processes # Configure the node processes to start at reboot
+#    - upgrade # Upgrade relevant packages
+
+deploy_dir: /opt/app

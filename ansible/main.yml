@@ -12,7 +12,9 @@
     - nvm
     - mongodb
     - yarn
-    - ruby
+#    - ruby
+#    - rabbit-mq
+    - pm2
 
 
 

@@ -37,7 +37,7 @@
 - name: Update Rubygems
   command: gem update --system
 
-sa- name: Install Bundler
+- name: Install Bundler
   gem: name=bundler
     state=present
 

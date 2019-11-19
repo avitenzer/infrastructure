@@ -17,3 +17,8 @@
   shell: "source /root/.nvm/nvm.sh && nvm install 8.11.3"
   args:
     executable: /bin/bash
+- name: Install npm
+  apt:
+    pkg:
+      npm
+    state: present
